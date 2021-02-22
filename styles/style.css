@@ -1,0 +1,268 @@
+/*Variables*/
+:root {
+  --ff-base: "Noto Sans";
+  --ff-serif: "Noto Serif";
+  --padding: 1rem;
+  --bg-dark: #141414;
+}
+
+.light-theme {
+  --fc-primary: #393939;
+  --fc-secondary: #767676;
+  --bg-primary: #fff;
+  --bg-light: #f7f7f7;
+}
+
+.dark-theme {
+  --fc-primary: #f7f7f7;
+  --fc-secondary: #676767;
+  --bg-primary: #141414;
+  --bg-light: #202020;
+}
+
+/*Global styles*/
+.newsletter__button, .about__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__menu-bar, [class*=button] {
+  display: flex;
+  align-items: center;
+}
+
+.home__date, .nav__item, [class*=button], [class*=head], .featured__more {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.featured__more {
+  color: var(--fc-secondary);
+}
+
+svg {
+  stroke: currentColor;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+/*Text styles*/
+a {
+  text-decoration: none;
+  color: var(--fc-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+}
+
+/*Body Styles*/
+body, html {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  font-family: var(--ff-base), sans-serif;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  font-family: var(--ff-serif);
+  margin: 0;
+}
+
+[class*=button] {
+  line-height: 0;
+  cursor: pointer;
+}
+[class*=button] svg {
+  margin-left: 5px;
+}
+
+@media (max-width: 800px) {
+  .mouse {
+    display: none;
+  }
+}
+.nav {
+  display: flex;
+  padding: var(--padding);
+}
+.nav__menu-bar {
+  display: none;
+  justify-content: flex-end;
+}
+.nav__menu {
+  position: relative;
+  margin-left: auto;
+}
+.nav__logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .nav__logo, .nav__menu-bar {
+    flex-grow: 1;
+    flex-basis: 50%;
+    display: inline-flex;
+  }
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: calc(2.5rem + 1rem);
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    background-color: #f2f2f2;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 250ms ease-out 250ms;
+  }
+  .nav__item {
+    padding: 0.5rem 1rem;
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  .nav__menu--active {
+    transform: scaleY(1);
+    transition: transform 300ms ease-in-out;
+  }
+  .nav__menu--active > .nav__item {
+    opacity: 1;
+    transition: opacity 250ms ease-out 300ms;
+  }
+}
+.home {
+  display: flex;
+  flex-direction: column;
+}
+.home__content {
+  order: 0;
+}
+.home__head {
+  margin-top: 0;
+}
+.home__main {
+  font-size: 3rem;
+  margin: 0.65rem 0;
+}
+@media (max-width: 800px) {
+  .home {
+    padding-bottom: 2rem;
+  }
+  .home__content {
+    order: 1;
+    padding: var(--padding);
+  }
+  .home__head {
+    margin-top: 1rem;
+  }
+  .home__main {
+    font-size: 2rem;
+  }
+}
+.featured {
+  padding: calc(var(--padding) * 3) var(--padding);
+  background-color: var(--bg-light);
+}
+.featured__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.featured__item + .featured__item {
+  margin-top: 2.5rem;
+}
+.featured__author {
+  margin: 0.65rem 0 1rem 0;
+  font-weight: 400;
+}
+.featured__image {
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+}
+.about__content {
+  padding: calc(var(--padding) * 2) var(--padding);
+  order: 1;
+}
+.about__head {
+  margin-bottom: 0.75rem;
+}
+.about__text {
+  line-height: 1.65;
+}
+.about__button {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  outline: 1px solid #333;
+  max-width: 180px;
+}
+
+.newsletter {
+  background-color: var(--bg-light);
+  padding: calc(var(--padding) * 2.5) var(--padding);
+}
+.newsletter__head {
+  margin-bottom: 1rem;
+}
+.newsletter__text {
+  line-height: 1.4;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+.newsletter__button {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  outline: 1px solid #ddd;
+  max-width: 200px;
+}
+
+.footer {
+  background-color: var(--bg-dark);
+  padding: calc(var(--padding) * 2) var(--padding);
+  color: var(--bg-light);
+}
+.footer__logo {
+  text-align: center;
+  margin: 1.5rem 0 0 0;
+}
+.footer__logo img {
+  height: 4rem;
+  margin: 0 auto;
+}
+.footer p {
+  margin: 0.6rem 0;
+  padding: 0;
+}
+.footer__timings, .footer__contact {
+  font-size: 0.85rem;
+  color: var(--fc-secondary);
+}
+
+/*# sourceMappingURL=style.css.map */

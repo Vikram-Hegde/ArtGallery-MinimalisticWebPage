@@ -1,0 +1,40 @@
+.home {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    order: 0;
+  }
+
+  &__head {
+    margin-top: 0;
+  }
+
+  &__main {
+    font-size: 3rem;
+    margin: .65rem 0;
+  }
+
+  &__date {
+    @extend %sm-caps;
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    padding-bottom: 2rem;
+    
+    &__content {
+      order: 1;
+      padding: var(--padding);
+    }
+
+    &__head {
+      margin-top: 1rem;
+    }
+
+    &__main {
+      font-size: 2rem;
+    }
+  }
+}

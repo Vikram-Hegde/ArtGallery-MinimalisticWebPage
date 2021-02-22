@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--bg-dark);
+  padding: calc(var(--padding) * 2) var(--padding);
+  color: var(--bg-light);
+
+  &__logo {
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+
+    img {
+      height: 4rem;
+      margin: 0 auto;
+    }
+  }
+
+  p {
+      margin: .6rem 0;
+      padding: 0;
+  }
+
+  &__timings, &__contact {
+      font-size: .85rem;
+      color: var(--fc-secondary);
+  }
+}

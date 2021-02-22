@@ -1,0 +1,22 @@
+.newsletter {
+    background-color: var(--bg-light);
+    padding: calc(var(--padding) * 2.5) var(--padding);
+
+    &__head {
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        line-height: 1.4;
+        font-weight: normal;
+        font-size: 1.4rem;
+    }
+
+    &__button {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        outline:1px solid #ddd;
+        max-width: 200px;
+        @extend %flex-center;
+    }
+}

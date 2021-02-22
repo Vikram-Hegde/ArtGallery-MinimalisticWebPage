@@ -1,0 +1,19 @@
+<svg width="32" height="50" viewBox="0 0 32 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    circle {
+        animation: scroll .8s infinite;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translate(0)
+        }
+
+        to {
+            transform: translate(14px)
+        }
+    }
+</style>
+<rect x="1" y="1" width="30" height="48" rx="15" stroke="#393939" stroke-width="2"/>
+<circle cx="16" cy="13" r="3" fill="#393939"/>
+</svg>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="light-theme">
+    <header>
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="./images/art gallery.svg" alt="Art Gallery" />
+        </div>
+        <div class="nav__menu-bar">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 12H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 6H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 18H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <ul class="nav__menu">
+          <li class="nav__item"><a href="#home">Home</a></li>
+          <li class="nav__item"><a href="#featured">Featured</a></li>
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="home__content">
+          <div class="home__head">Collections</div>
+          <h1 class="home__main">Harry Spencer</h1>
+          <div class="home__date">Posted on 20th February</div>
+        </div>
+        <div class="hero">
+          <img
+            src="./images/hero.jpg"
+            class="hero__image"
+            alt="Harry Spencer's art"
+          />
+        </div>
+        <div class="mouse">
+          <svg
+            width="32"
+            height="50"
+            viewBox="0 0 32 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <style>
+              circle {
+                animation: scroll 0.75s infinite alternate;
+              }
+
+              @keyframes scroll {
+                from {
+                  transform: translateY(0);
+                }
+
+                to {
+                  transform: translateY(20px);
+                }
+              }
+            </style>
+            <rect
+              x="1"
+              y="1"
+              width="30"
+              height="48"
+              rx="15"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <circle cx="16" cy="13" r="3" fill="currentColor" />
+          </svg>
+        </div>
+      </section>
+      <section class="featured" id="featured">
+        <div class="featured__header">
+          <div class="featured__head">Featured</div>
+          <div class="featured__option button">
+            View All
+            <svg
+              width="24"
+              height="12"
+              viewBox="0 0 32 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.59607 9H31M31 9L23.026 1M31 9L23.026 17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="featured__list">
+          <div class="featured__item">
+            <img
+              src="./images/faetured-1.jpg"
+              alt="Ciara Paintings"
+              class="featured__image"
+            />
+            <h2 class="featured__author">Paintings By Ciara</h2>
+            <div class="featured__more button">
+              Explore More
+              <svg
+                width="24"
+                height="12"
+                viewBox="0 0 32 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.59607 9H31M31 9L23.026 1M31 9L23.026 17"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="featured__item">
+            <img src="./images/featured-2.jpg" class="featured__image" alt="Zakaria Paintings" />
+            <h2 class="featured__author">Paintings By Zakaria</h2>
+            <div class="featured__more button">
+              Explore More
+              <svg
+                width="24"
+                height="12"
+                viewBox="0 0 32 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.59607 9H31M31 9L23.026 1M31 9L23.026 17"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="about__content">
+          <div class="about__head">About</div>
+          <h1 class="about__text">
+            We represent artists from all over the world with works ranging from
+            paintings and other artistic skills.
+          </h1>
+          <div class="about__button">
+            Learn More
+            <svg
+              width="24"
+              height="12"
+              viewBox="0 0 32 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.59607 9H31M31 9L23.026 1M31 9L23.026 17"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="about__hero">
+          <img src="./images/about.jpg" alt="People looking at ">
+        </div>
+      </section>
+      <section class="newsletter">
+        <div class="newsletter__content">
+          <div class="newsletter__head">Subscribe</div>
+          <h3 class="newsletter__text">
+            Stay up to date with our news, featured artists and other updates
+          </h3>
+        </div>
+        <div class="newsletter__button">
+          Sign Up
+          <svg
+            width="24"
+            height="12"
+            viewBox="0 0 32 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.59607 9H31M31 9L23.026 1M31 9L23.026 17"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </section>
+      <footer class="footer" id="contact">
+        <div class="footer__content">
+          <div class="footer__head">Timings</div>
+          <div class="footer__timings">
+            <p>Mon-Fri: 10.00am – 5.30pm</p>
+            <p>Sat: 11.00am – 4.00pm</p>
+            <p>Sun: 11.00am – 3.00pm</p>
+          </div>
+          <div class="footer__head">Contact</div>
+          <div class="footer__contact">
+            <p>09 3773 1334</p>
+            <p>art@gallery.co.in</p>
+          </div>
+        </div>
+        <div class="footer__logo">
+          <img src="./images/art gallery-1.svg" alt="Art Gallery Logo" />
+        </div>
+      </footer>
+    </main>
+    <script>
+      var navBar = document.querySelector(".nav__menu-bar");
+      var navMenu = document.querySelector(".nav__menu")
+      navBar.addEventListener("click", () => {
+        navMenu.classList.toggle("nav__menu--active");
+      })
+    </script>
+  </body>
+</html>

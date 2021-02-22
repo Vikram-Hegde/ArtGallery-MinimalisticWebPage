@@ -1,0 +1,106 @@
+/*Variables*/
+:root {
+  --ff-base: "Noto Sans";
+  --ff-serif: "Noto Serif";
+  --padding: 1rem;
+
+  --bg-dark: #141414;
+}
+.light-theme {
+  --fc-primary: #393939;
+  --fc-secondary: #767676;
+
+  --bg-primary: #fff;
+  --bg-light: #f7f7f7;
+}
+.dark-theme {
+  --fc-primary: #f7f7f7;
+  --fc-secondary: #676767;
+
+  --bg-primary: #141414;
+  --bg-light: #202020;
+}
+
+/*Global styles*/
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+%sm-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: .85rem;
+}
+
+%sm-caps--light {
+  @extend %sm-caps;
+  color: var(--fc-secondary);
+}
+
+svg {
+  stroke: currentColor;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+/*Text styles*/
+a {
+  text-decoration: none;
+  color: var(--fc-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+}
+
+/*Body Styles*/
+body, html {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  font-family: var(--ff-base), sans-serif;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  font-family: var(--ff-serif);
+  margin: 0;
+}
+
+[class*="head"] {
+  @extend %sm-caps;
+}
+
+[class*="button"] {
+  line-height: 0;
+  cursor: pointer;
+  @extend %align-center, %sm-caps;
+
+  svg {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .mouse {
+    display: none;
+  }
+}

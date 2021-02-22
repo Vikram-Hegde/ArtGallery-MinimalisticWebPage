@@ -1,0 +1,27 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+
+  &__content {
+    padding: calc(var(--padding) * 2) var(--padding);
+    order: 1;
+  }
+
+  &__head {
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    line-height: 1.65;
+  }
+
+  &__button {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    outline:1px solid #333;
+    max-width: 180px;
+    @extend %flex-center
+  }
+}
