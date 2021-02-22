@@ -14,12 +14,17 @@
   }
 
   p {
-      margin: .6rem 0;
-      padding: 0;
+    margin: 0.6rem 0;
+    padding: 0;
   }
 
-  &__timings, &__contact {
-      font-size: .85rem;
-      color: var(--fc-secondary);
+  &__timings,
+  &__contact {
+    font-size: 0.85rem;
+    color: var(--fc-secondary);
+  }
+
+  &__head + &__head {
+      margin-top: 1rem;
   }
 }

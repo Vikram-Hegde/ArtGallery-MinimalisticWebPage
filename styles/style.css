@@ -264,5 +264,8 @@ h6 {
   font-size: 0.85rem;
   color: var(--fc-secondary);
 }
+.footer__head + .footer__head {
+  margin-top: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */
