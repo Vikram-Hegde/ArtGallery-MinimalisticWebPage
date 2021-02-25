@@ -27,7 +27,7 @@
   align-items: center;
 }
 
-.nav__menu-bar, [class*=button] {
+.nav__logo, .nav__menu, .nav__menu-bar, [class*=button] {
   display: flex;
   align-items: center;
 }
@@ -71,6 +71,7 @@ body, html {
   font-family: var(--ff-base), sans-serif;
   scroll-behavior: smooth;
   user-select: none;
+  font-size: clamp(14px, 16px, 20px);
 }
 
 h1,
@@ -98,7 +99,7 @@ h6 {
 }
 .nav {
   display: flex;
-  padding: var(--padding);
+  padding: calc(var(--padding)*1.5);
 }
 .nav__menu-bar {
   display: none;
@@ -107,13 +108,14 @@ h6 {
 .nav__menu {
   position: relative;
   margin-left: auto;
+  gap: 1.5rem;
 }
 .nav__logo {
   height: 2.5rem;
   width: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .nav {
     flex-wrap: wrap;
     position: relative;
@@ -124,9 +126,11 @@ h6 {
     display: inline-flex;
   }
   .nav__menu {
+    display: unset;
     position: absolute;
+    z-index: 1;
     left: 0;
-    top: calc(2.5rem + 1rem);
+    top: calc(3.5rem + 1rem);
     text-align: center;
     width: 100%;
     padding: 1rem 0;
@@ -153,32 +157,26 @@ h6 {
 .home {
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding: 0 0 var(--padding) 0;
 }
 .home__content {
-  order: 0;
+  order: 1;
+  padding: var(--padding);
 }
 .home__head {
-  margin-top: 0;
+  margin-top: 1.25rem;
 }
 .home__main {
-  font-size: 3rem;
+  font-size: 2.65rem;
   margin: 0.65rem 0;
 }
-@media (max-width: 800px) {
-  .home {
-    padding-bottom: 2rem;
-  }
-  .home__content {
-    order: 1;
-    padding: var(--padding);
-  }
-  .home__head {
-    margin-top: 1rem;
-  }
-  .home__main {
-    font-size: 2rem;
-  }
+.mouse {
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 16px);
 }
+
 .featured {
   padding: calc(var(--padding) * 3) var(--padding);
   background-color: var(--bg-light);
@@ -201,6 +199,15 @@ h6 {
   object-fit: cover;
 }
 
+@media (min-width: 700px) {
+  .featured__list {
+    display: flex;
+    gap: 1rem;
+  }
+  .featured__item + .featured__item {
+    margin-top: 0;
+  }
+}
 .about {
   display: flex;
   flex-direction: column;

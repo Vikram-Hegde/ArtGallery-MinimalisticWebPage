@@ -1,7 +1,7 @@
 .featured {
   padding: calc(var(--padding) * 3) var(--padding);
   background-color: var(--bg-light);
-  
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -9,23 +9,37 @@
   }
 
   &__item {
-      & + & {
-          margin-top: 2.5rem;
-      }
+    & + & {
+      margin-top: 2.5rem;
+    }
   }
 
   &__author {
-      margin: .65rem 0 1rem 0;
-      font-weight: 400;
+    margin: 0.65rem 0 1rem 0;
+    font-weight: 400;
   }
 
   &__more {
-      @extend %sm-caps--light;
+    @extend %sm-caps--light;
   }
 
   &__image {
-      border-radius: 8px;
-      overflow: hidden;
-      object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 700px) {
+  .featured {
+    &__list {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__item + &__item {
+        margin-top: 0;
+
+    }
   }
 }
