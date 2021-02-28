@@ -2,7 +2,7 @@
 :root {
   --ff-base: "Noto Sans";
   --ff-serif: "Noto Serif";
-  --padding: 1rem;
+  --padding: clamp(1rem, 1.5rem, 2rem);
 
   --bg-dark: #141414;
 }
@@ -103,5 +103,11 @@ h6 {
 @media (max-width: 800px) {
   .mouse {
     display: none;
+  }
+}
+
+@media(min-width: 900px) {
+  :root {
+    --padding: clamp(10rem, 11rem, 12rem);
   }
 }

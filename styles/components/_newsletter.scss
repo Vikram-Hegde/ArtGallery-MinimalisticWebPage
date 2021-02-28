@@ -1,6 +1,6 @@
 .newsletter {
     background-color: var(--bg-light);
-    padding: calc(var(--padding) * 2.5) var(--padding);
+    padding: calc(min(var(--padding), 4rem)) var(--padding);
 
     &__head {
         margin-bottom: 1rem;

@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--bg-dark);
-  padding: calc(var(--padding) * 2) var(--padding);
+  padding: calc(min(var(--padding), 4rem)) var(--padding);
   color: var(--bg-light);
 
   &__logo {

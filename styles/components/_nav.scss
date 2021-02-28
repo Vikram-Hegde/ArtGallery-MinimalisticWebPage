@@ -1,6 +1,6 @@
 .nav {
   display: flex;
-  padding: calc(var(--padding)*1.5);
+  padding: min(var(--padding), 2rem) var(--padding);
 
   &__menu-bar {
     display: none;

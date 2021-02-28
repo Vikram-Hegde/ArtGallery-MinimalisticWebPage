@@ -2,7 +2,7 @@
 :root {
   --ff-base: "Noto Sans";
   --ff-serif: "Noto Serif";
-  --padding: 1rem;
+  --padding: clamp(1rem, 1.5rem, 2rem);
   --bg-dark: #141414;
 }
 
@@ -97,9 +97,14 @@ h6 {
     display: none;
   }
 }
+@media (min-width: 900px) {
+  :root {
+    --padding: clamp(10rem, 11rem, 12rem);
+  }
+}
 .nav {
   display: flex;
-  padding: calc(var(--padding)*1.5);
+  padding: min(var(--padding), 2rem) var(--padding);
 }
 .nav__menu-bar {
   display: none;
@@ -162,7 +167,7 @@ h6 {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 0 0 var(--padding) 0;
+  padding: 0 0 min(var(--padding), 2rem) 0;
 }
 .home__content {
   order: 1;
@@ -178,12 +183,13 @@ h6 {
 .mouse {
   position: absolute;
   bottom: 1rem;
-  left: 1rem;
+  left: var(--padding);
 }
 
 @media (min-width: 600px) {
   .home {
     flex-direction: row-reverse;
+    align-items: center;
   }
   .home__content {
     align-self: center;
@@ -191,13 +197,14 @@ h6 {
   }
   .home .hero {
     flex-basis: 100%;
+    padding-right: var(--padding);
   }
   .home h1 {
     font-size: 2.5rem;
   }
 }
 .featured {
-  padding: calc(var(--padding) * 3) var(--padding);
+  padding: min(var(--padding), 4rem) var(--padding);
   background-color: var(--bg-light);
 }
 .featured__header {
@@ -246,7 +253,7 @@ h6 {
   color: var(--bg-light);
 }
 .about__content {
-  padding: calc(var(--padding) * 2) var(--padding);
+  padding: calc(min(var(--padding), 3rem)) var(--padding);
   order: 1;
   justify-content: flex-start;
 }
@@ -272,7 +279,6 @@ h6 {
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
-    padding: calc(var(--padding) * 2);
     justify-content: center;
   }
   .about__hero {
@@ -298,7 +304,7 @@ h6 {
 }
 .newsletter {
   background-color: var(--bg-light);
-  padding: calc(var(--padding) * 2.5) var(--padding);
+  padding: calc(min(var(--padding), 4rem)) var(--padding);
 }
 .newsletter__head {
   margin-bottom: 1rem;
@@ -317,7 +323,7 @@ h6 {
 
 .footer {
   background-color: var(--bg-dark);
-  padding: calc(var(--padding) * 2) var(--padding);
+  padding: calc(min(var(--padding), 4rem)) var(--padding);
   color: var(--bg-light);
 }
 .footer__logo {

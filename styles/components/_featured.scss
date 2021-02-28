@@ -1,5 +1,5 @@
 .featured {
-  padding: calc(var(--padding) * 3) var(--padding);
+  padding: min(var(--padding), 4rem) var(--padding);
   background-color: var(--bg-light);
 
   &__header {
