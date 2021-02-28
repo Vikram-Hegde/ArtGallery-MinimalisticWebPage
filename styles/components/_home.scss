@@ -26,7 +26,23 @@
 .mouse {
   position: absolute;
   bottom: 1rem;
-  left: calc(50% - 16px);
+  left: 1rem;
+}
+
+@media (min-width: 600px) {
+  .home {
+    flex-direction: row-reverse;
+
+    &__content {
+      align-self: center;
+      flex-basis: 100%;
+    }
+
+    .hero {
+      flex-basis:100%;
+
+    }
+  }
 }
 
 
