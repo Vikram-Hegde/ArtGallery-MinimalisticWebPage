@@ -14,7 +14,7 @@
   }
 
   &__main {
-    font-size: 2.65rem;
+    font-size: 2rem;
     margin: .65rem 0;
   }
 
@@ -40,7 +40,10 @@
 
     .hero {
       flex-basis:100%;
+    }
 
+    h1 {
+      font-size: 2.5rem;
     }
   }
 }

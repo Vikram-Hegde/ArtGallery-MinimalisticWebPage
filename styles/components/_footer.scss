@@ -28,3 +28,16 @@
       margin-top: 1rem;
   }
 }
+
+@media (min-width: 700px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo img{
+      height: auto;
+      width: 200px;
+    }
+  }
+}

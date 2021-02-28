@@ -111,6 +111,10 @@ h6 {
   gap: 1.5rem;
 }
 .nav__logo {
+  height: 2rem;
+  width: auto;
+}
+.nav__logo img {
   height: 2.5rem;
   width: auto;
 }
@@ -130,7 +134,7 @@ h6 {
     position: absolute;
     z-index: 1;
     left: 0;
-    top: calc(3.5rem + 1rem);
+    top: calc(3rem + 1rem);
     text-align: center;
     width: 100%;
     padding: 1rem 0;
@@ -168,7 +172,7 @@ h6 {
   margin-top: 1.25rem;
 }
 .home__main {
-  font-size: 2.65rem;
+  font-size: 2rem;
   margin: 0.65rem 0;
 }
 .mouse {
@@ -187,6 +191,9 @@ h6 {
   }
   .home .hero {
     flex-basis: 100%;
+  }
+  .home h1 {
+    font-size: 2.5rem;
   }
 }
 .featured {
@@ -209,6 +216,7 @@ h6 {
   border-radius: 8px;
   overflow: hidden;
   object-fit: cover;
+  width: 100%;
 }
 
 @media (min-width: 700px) {
@@ -240,6 +248,7 @@ h6 {
 .about__content {
   padding: calc(var(--padding) * 2) var(--padding);
   order: 1;
+  justify-content: flex-start;
 }
 .about__head {
   margin-bottom: 0.75rem;
@@ -264,6 +273,7 @@ h6 {
     display: flex;
     flex-direction: column;
     padding: calc(var(--padding) * 2);
+    justify-content: center;
   }
   .about__hero {
     flex-grow: 1;
@@ -279,7 +289,7 @@ h6 {
     margin-bottom: 3rem;
   }
   .about__text {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2.25rem, 2.75rem);
     letter-spacing: 1px;
   }
   .about__button {
@@ -328,6 +338,18 @@ h6 {
 }
 .footer__head + .footer__head {
   margin-top: 1rem;
+}
+
+@media (min-width: 700px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__logo img {
+    height: auto;
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
